@@ -3,9 +3,9 @@ import re
 
 id_pattern = re.compile(r'^.\d+$')
 
-
+APP_ID = 2904321
 token = os.environ.get("TOKEN","5473581289:AAHiLecdd3nK-ogxNqqjbll8MdqS7qkaSAk")
-app_id = int(os.environ.get("APP_ID",2904321))
+app_id = int(os.environ.get("APP_ID", 2904321))
 app_hash = os.environ.get("API_HASH","87faa32f68324a09aecdd9911db846a2")
 allowed = [int(user) if id_pattern.search(user) else user for user in os.environ.get('AUTH_USERS', '').split()]
 
